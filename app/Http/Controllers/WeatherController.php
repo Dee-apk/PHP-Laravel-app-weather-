@@ -1,7 +1,4 @@
 <?php
-
-// app/Http/Controllers/WeatherController.php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -20,7 +17,7 @@ class WeatherController extends Controller
         $country = $request->input('country');
 
         // Make an API call to OpenWeather to get weather data
-        $apiKey = '';  // Replace with your OpenWeather API key
+        $apiKey = '';  // No api key here bcz of security 
         $response = Http::get("http://api.openweathermap.org/data/2.5/weather", [
             'q' => $country,
             'appid' => $apiKey,
